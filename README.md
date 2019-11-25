@@ -11,7 +11,9 @@ The VBA Test Suite enables you to run individual tests and groups of tests in on
 
 ---
 
-### Example output (printed to debuging window):
+### Example output:
+
+Below is the output of a module of tests. It ran 7 separate test functions and then aggregated the results and printed a summary report in the debugger window.
 
 ```
 #Main_Utils
