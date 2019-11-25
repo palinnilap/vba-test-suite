@@ -1,8 +1,15 @@
 # vba-test-suite
-Lightweight testing for macros
+### Lightweight and easy testing for macros
+ 
+Most macros become legacy code the moment they are written. Tests can fix this. 
 
+By having unit tests for your macro, you can 
+    1. make sure your functions do what you think they should do,
+    2. make sure your code still works after each change.
 
-Example output:
+The VBA Test Suite enables you to run individual tests and groups of tests in one click. 
+
+Example output (printed to debuging window):
 
 ```
 #Main_Utils
@@ -12,7 +19,6 @@ Example output:
        ....SUCCESS    | 1 equals 1
        ....SUCCESS    | Zulu equals Zulu
 #test_GetRecordDict
-11/25/2019 9:09:39 AM   [DBUG] clsAccessDB.Create tblMuni
        ....SUCCESS    | Akron equals Akron
        ....SUCCESS    | 165 equals 165
 #test_CloneDict
