@@ -2,8 +2,6 @@ Attribute VB_Name = "Utils"
 
 Option Explicit
 
-'author: palinnilap@protonmail.com
-
 Public Function GetHeaders(ws As Worksheet) As Range
 
     Set GetHeaders = _
