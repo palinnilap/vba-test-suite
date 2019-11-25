@@ -2,8 +2,6 @@ Attribute VB_Name = "tests_Utils"
 
 Option Explicit
 
-'author: palinnilap@protonmail.com
-
 'a module level variable makes the mock easier to work with
 Private wb As Workbook
 
