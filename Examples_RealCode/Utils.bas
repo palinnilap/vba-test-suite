@@ -3,6 +3,56 @@ Option Explicit
 
 'Version 23 - getheaders and getrowdict
 
+Public Function QuickSort2D(arr2D As Variant, first As Long, last As Long)
+  
+  'PURPOSE: Takes a two column array [zero-indexed] and sorts by the second column
+  
+  Dim centVal As Variant
+  Dim vTemp(0, 0 To 1) As Variant
+  
+  Dim tempLow As Long
+  Dim tempHi As Long
+  tempLow = first
+  tempHi = last
+  
+  centVal = LCase(arr2D((first + last) \ 2, 1))
+  Do While tempLow <= tempHi
+    
+    Do While LCase(arr2D(tempLow, 1)) < centVal And tempLow < last
+      tempLow = tempLow + 1
+    Loop
+    
+    Do While centVal < LCase(arr2D(tempHi, 1)) And tempHi > first
+      tempHi = tempHi - 1
+    Loop
+    
+    If tempLow <= tempHi Then
+    
+        ' Swap values
+        vTemp(0, 0) = arr2D(tempLow, 0)
+        vTemp(0, 1) = arr2D(tempLow, 1)
+        
+        arr2D(tempLow, 0) = arr2D(tempHi, 0)
+        arr2D(tempLow, 1) = arr2D(tempHi, 1)
+        
+        arr2D(tempHi, 0) = vTemp(0, 0)
+        arr2D(tempHi, 1) = vTemp(0, 1)
+        
+        ' Move to next positions
+        tempLow = tempLow + 1
+        tempHi = tempHi - 1
+      
+    End If
+    
+  Loop
+  
+  If first < tempHi Then QuickSort2D arr2D, first, tempHi
+  If tempLow < last Then QuickSort2D arr2D, tempLow, last
+
+  QuickSort2D = arr2D
+  
+End Function
+
 '------------------------------
 '      Misc Functions
 '------------------------------
