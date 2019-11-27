@@ -1,7 +1,7 @@
 # vba-test-suite
 ### Lightweight and easy testing for macros
  
-Most macros become legacy code the moment they are written. Tests can fix this. 
+Most macros become legacy code the moment they are written. Unit tests can fix this. 
 
 By having unit tests for your macro, you can <br>
 1. make sure your functions do what you think they should do, <br>
